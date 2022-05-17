@@ -1,0 +1,1 @@
+(()=>{"use strict";let t={title:"Test",desc:"Test Object",dueDate:"05/15/22",priority:"High",notes:"Just a test object",checklist:"yes"};console.log(t)})();
