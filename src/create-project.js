@@ -1,11 +1,8 @@
-const createProject = (title, desc, tasksToAdd) => {
+const createProject = (title, desc) => {
     return {
         title,
         desc,
-        tasks: [],
-        addTask: () => {
-            tasksToAdd.forEach(task => this.tasks.push(task))
-        }
+        tasks: []
     }
 }
 
