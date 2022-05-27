@@ -1,1 +1,0 @@
-(()=>{"use strict";const t=[];let e={title:"Test",desc:"Test Task",dueDate:"05/15/22",priority:"High",notes:"Just a test object",checklist:"yes"};[e.title,e.desc,e.dueDate,e.priority,e.notes,e.checklist].forEach((t=>{console.log(t)}));let s=((t,e)=>({title:t,desc:e,tasks:[]}))("Default","Default Project");t.push(s),s.tasks.push(e),console.log(t)})();
