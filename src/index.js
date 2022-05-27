@@ -1,5 +1,4 @@
-import Task from './task';
-import Project from './project';
+import { Task, Project } from './Constructors';
 
 let Test = new Task ('Test', 'Just a test task', '05/26/22', 'High');
 let testProject = new Project ('Default');
