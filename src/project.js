@@ -3,9 +3,9 @@ class Project {
         this.title = title,
         this.tasks = []
     }
-    // This is where the tasks should be shown because each project has their own tasks
-    displayTasks () {
-        console.log(this.tasks);
+    // There should be a function to save a created project
+    saveProject (list) {
+        list.push(this);
     }
 }
 
