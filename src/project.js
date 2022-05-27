@@ -8,3 +8,5 @@ class Project {
         console.log(this.tasks);
     }
 }
+
+export default Project;
