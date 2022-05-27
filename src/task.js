@@ -5,9 +5,9 @@ class Task {
         this.due = due,
         this.priority = priority
     }
-    // this is temporary. displaying tasks should be the responsibility or a project
-    displaytask () {
-        console.log(this.title, this.desc, this.due, this.priority)
+    // Choose which project a created task should be assigned to
+    addTask (tasklist) {
+        tasklist.push(this);
     }
 }
 
