@@ -6,7 +6,3 @@ let testProject = new Project ('Default');
 // The created task should be added to the test project's tasks list
 Test.addTask(testProject.tasks);
 console.log(testProject.tasks);
-
-if (localStorage.getItem('myProjects') === null) {
-    console.log("This doesn't exist");
-}
