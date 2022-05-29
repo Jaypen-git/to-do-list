@@ -1,6 +1,5 @@
 class Task {
-    constructor (refNum, title, desc, due, priority) {
-        this.refNum = refNum,
+    constructor (title, desc, due, priority) {
         this.title = title,
         this.desc = desc,
         this.due = due,
