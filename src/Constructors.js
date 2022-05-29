@@ -1,13 +1,17 @@
 class Task {
-    constructor (title, desc, due, priority) {
+    constructor (refNum, title, desc, due, priority) {
+        this.refNum = refNum,
         this.title = title,
         this.desc = desc,
         this.due = due,
         this.priority = priority
     }
-    // Choose which project a created task should be assigned to
-    addTask (tasklist) {
-        tasklist.push(this);
+    // method for editing the created object
+    editTask (title, desc, due, priority) {
+        this.title = title,
+        this.desc = desc,
+        this.due = due,
+        this.priority = priority
     }
 }
 
@@ -17,8 +21,9 @@ class Project {
         this.tasks = []
     }
     // There should be a function to save a created project
-    saveProject (list) {
-        list.push(this);
+    editProject (title) {
+        this.title = title,
+        this.tasks = tasks
     }
 }
 
