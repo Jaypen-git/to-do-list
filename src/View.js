@@ -1,5 +1,5 @@
-const projectContainer = document.querySelector('#project');
-const projectListContainer = document.querySelector('#projectList');
+const tasks = document.querySelector('#tasks');
+const projects = document.querySelector('#projects');
 
 const viewProject = (title) => {
     const createButton = (title) => {
@@ -19,7 +19,7 @@ const viewProject = (title) => {
         div.appendChild(createH1());
         div.appendChild(createButton('Edit'));
         div.appendChild(createButton('Delete'));
-        projectContainer.appendChild(div);
+        tasks.appendChild(div);
     })();
 }
 
@@ -27,21 +27,24 @@ const viewProjectList = (title) => {
     let a = document.createElement('a');
     a.innerText = title;
     a.setAttribute('href', '#');
-    projectListContainer.appendChild(a);
+    projects.appendChild(a);
 }
 
 const viewForm = (parent) => {
     let form = document.createElement('form');
     let input = document.createElement('input');
+    let submit = document.createElement('input');
     input.setAttribute('type', 'text');
+    submit.setAttribute('type', 'submit');
     form.appendChild(input);
+    form.appendChild(submit);
     parent.appendChild(form);
 }
 
 const viewAddButton = (parent, item) => {
-    let a = document.createElement('a');
-    a.innerText = `Add ${item}`;
-    parent.appendChild(a);
+    let button = document.createElement('button');
+    button.innerText = `Add ${item}`;
+    parent.appendChild(button);
 }
 
-export { viewProject, viewProjectList, viewAddButton };
+export { viewProject, viewProjectList, viewForm, viewAddButton };
