@@ -1,5 +1,5 @@
 import { Task, Project } from './Constructors';
-import { viewProject, viewProjectList, viewAddButton, viewForm } from './View';
+import { viewProjects, viewTasks, viewAddButton, viewForm } from './View';
 
 const tasks = document.querySelector('#tasks');
 const projects = document.querySelector('#projects');
@@ -10,8 +10,8 @@ let testArray = [{title: 'Number One', key: 1}, {title: 'Number Two', key: 2}];
 
 // The created task should be added to the test project's tasks list
 testProject.tasks.push(Test);
-testProject.tasks.forEach(task => viewProject(task.title));
-testArray.forEach(project => viewProjectList(project.title));
+testProject.tasks.forEach(task => viewTasks(task.title));
+testArray.forEach(project => viewProjects(project.title));
 viewAddButton(tasks, 'Task');
 viewAddButton(projects, 'Project');
 viewForm(tasks);

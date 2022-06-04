@@ -1,7 +1,7 @@
 const tasks = document.querySelector('#tasks');
 const projects = document.querySelector('#projects');
 
-const viewProject = (title) => {
+const viewTasks = (title) => {
     const createButton = (title) => {
         let button = document.createElement('button');
         button.innerText = title;
@@ -23,7 +23,7 @@ const viewProject = (title) => {
     })();
 }
 
-const viewProjectList = (title) => {
+const viewProjects = (title) => {
     let a = document.createElement('a');
     a.innerText = title;
     a.setAttribute('href', '#');
@@ -47,4 +47,4 @@ const viewAddButton = (parent, item) => {
     parent.appendChild(button);
 }
 
-export { viewProject, viewProjectList, viewForm, viewAddButton };
+export { viewTasks, viewProjects, viewForm, viewAddButton };
