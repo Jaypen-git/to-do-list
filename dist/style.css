@@ -1,9 +1,37 @@
+@font-face {
+    font-family: 'Selawik';
+    src: url(font/selawik.regular.ttf);
+}
+@font-face {
+    font-family: 'Selawik Bold';
+    src: url(font/selawik.bold.ttf);
+    font-weight: bold;
+}
 * {
+    font-family: 'Selawik';
     margin: 0;
+    padding-bottom: 3px;
     text-decoration: none;
 }
+div {
+    padding-bottom: 0;
+}
+h1 {
+    font-family: 'Selawik Bold';
+}
+button {
+    font-size: 16px;
+}
 header {
+    align-items: center;
+    background-color: #4691dc;
+    display: flex;
     height: 90px;
+    justify-content: center;
+}
+header h1 {
+    color: #eee;
+    font-size: 50px;
 }
 #container {
     display: grid;
@@ -11,10 +39,40 @@ header {
     height: calc(100vh - 90px);
 }
 #projects {
+    background-color: #ddd;
     grid-column: 1/2;
     grid-row: 1/3
+}
+#projects * {
+    display: block;
+}
+#projects form {
+    display: none;
 }
 #tasks {
     grid-column: 2/5;
     grid-row: 1/3;
+}
+#tasks .add {
+    float: right;
+    margin-right: 10%;
+}
+#tasks form {
+    display: none;
+}
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px auto;
+    width: 80%;
+}
+.task div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+}
+.task div button {
+    width: 70px;
 }

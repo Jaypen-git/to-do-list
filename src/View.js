@@ -8,7 +8,12 @@ const viewTasks = (title) => {
         button.classList.add(title);
         return button;
     }
-
+    const createButtonContainer = () => {
+        let div = document.createElement('div');
+        div.appendChild(createButton('Edit'));
+        div.appendChild(createButton('Delete'));
+        return div
+    }
     const createH1 = () => {
         let h1 = document.createElement('h1');
         h1.innerText = title;
@@ -16,9 +21,9 @@ const viewTasks = (title) => {
     }
     const createDiv = (() => {
         let div = document.createElement('div');
+        div.classList.add('task');
         div.appendChild(createH1());
-        div.appendChild(createButton('Edit'));
-        div.appendChild(createButton('Delete'));
+        div.appendChild(createButtonContainer());
         tasks.appendChild(div);
     })();
 }
@@ -44,6 +49,7 @@ const viewForm = (parent) => {
 const viewAddButton = (parent, item) => {
     let button = document.createElement('button');
     button.innerText = `Add ${item}`;
+    button.classList.add('add');
     parent.appendChild(button);
 }
 
