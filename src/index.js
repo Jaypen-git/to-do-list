@@ -1,18 +1,3 @@
-import { Task, Project } from './Constructors';
-import { viewProjects, viewTasks, viewAddButton, viewForm } from './View';
+import runPage from './Controller';
 
-const tasks = document.querySelector('#tasks');
-const projects = document.querySelector('#projects');
-
-let Test = new Task ('Test', 'Just a test task', '05/26/22', 'High');
-let testProject = new Project ('Default');
-let testArray = [{title: 'Number One', key: 1}, {title: 'Number Two', key: 2}];
-
-// The created task should be added to the test project's tasks list
-testProject.tasks.push(Test);
-testProject.tasks.forEach(task => viewTasks(task.title));
-testArray.forEach(project => viewProjects(project.title));
-viewAddButton(tasks, 'Task');
-viewAddButton(projects, 'Project');
-viewForm(tasks);
-viewForm(projects);
+runPage();

@@ -13,7 +13,7 @@
     padding-bottom: 3px;
     text-decoration: none;
 }
-div {
+html, body, div, header {
     padding-bottom: 0;
 }
 h1 {
@@ -35,7 +35,7 @@ header h1 {
 }
 #container {
     display: grid;
-    grid-template: 1fr 1fr / repeat(4, 1fr);
+    grid-template: 1fr 1fr / repeat(5, 1fr);
     height: calc(100vh - 90px);
 }
 #projects {
@@ -44,22 +44,25 @@ header h1 {
     grid-row: 1/3
 }
 #projects * {
+    font-size: 20px;
+}
+#projects * {
     display: block;
 }
 #projects form {
     display: none;
 }
 #tasks {
-    grid-column: 2/5;
+    grid-column: 2/6;
     grid-row: 1/3;
 }
 #tasks .add {
     float: right;
     margin-right: 10%;
 }
-#tasks form {
+/* #tasks form {
     display: none;
-}
+} */
 .task {
     display: flex;
     align-items: center;
@@ -71,8 +74,20 @@ header h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 20%;
+    width: 25%;
 }
 .task div button {
-    width: 70px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    height: 32px;
+    width: 80px;
+}
+.Edit {
+    background-color: #4575de;
+    border-radius: 5px;
+}
+.Delete {
+    background-color: #de4545;
+    border-radius: 5px;
 }
